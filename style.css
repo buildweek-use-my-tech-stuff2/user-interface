@@ -123,7 +123,7 @@ table {
   border-spacing: 0;
 }
 body {
-  background-color: #ECECEC;
+  background-image: url("/img/background.png");
   font-size: 62.5%;
 }
 #collapse {
@@ -140,10 +140,6 @@ body {
   z-index: 99;
   transition: max-height 0.2s ease-out;
 }
-#collapse .current {
-  color: #38cfb1;
-  background-color: #4D4646;
-}
 #collapse div {
   width: 100%;
   text-align: center;
@@ -155,16 +151,24 @@ body {
   box-shadow: 0px 10px 10px 0px black;
   border: 2px solid grey;
 }
+#collapse div a {
+  text-decoration: none;
+  color: #ECECEC;
+}
 #collapse div a:hover {
   color: #38cfb1;
+}
+#collapse div .current {
+  color: #38cfb1;
+  background-color: #4D4646;
 }
 #nav-button {
   position: fixed;
   top: 10px;
   right: 10px;
-  font-size: 2rem;
+  font-size: 2.3rem;
   padding: 5px;
-  color: #4D4646;
+  color: #F2A365;
   border: 3px solid #4D4646;
   border-radius: 20px;
   padding-right: 10px;
@@ -172,9 +176,14 @@ body {
   width: 50px;
   background-color: #38cfb1;
   z-index: 100;
+  -webkit-text-stroke: 2px #5B5656;
+}
+#nav-button:hover {
+  box-shadow: inset 0 0 10px #000000;
 }
 #header-cont {
-  background: #5B5656;
+  box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.75);
+  background: #4D4646;
   height: 100px;
 }
 #header-cont div img {
@@ -199,6 +208,7 @@ body {
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 15px;
+  box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.75);
 }
 #main-cont h1 {
   text-align: center;
@@ -213,6 +223,61 @@ body {
   border: 4px solid #F2A365;
 }
 #main-cont a {
+  text-align: right;
+  text-decoration: none;
+  color: #F2A365;
+}
+.footer {
+  background: #4D4646;
+  color: #F2A365;
+  text-align: center;
+}
+.footer a {
+  font-size: 1.6rem;
+}
+.footer p {
+  font-size: 1.3rem;
+}
+#main-cont-about {
+  margin-top: 30px;
+}
+#main-cont-about div {
+  border: 4px solid #38cfb1;
+  margin: 0 auto;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #5B5656;
+  color: white;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.75);
+}
+#main-cont-about h1 {
+  text-align: center;
+  color: #F2A365;
+  font-size: 1.4rem;
+  padding: 10px;
+}
+#main-cont-about h2 {
+  text-align: center;
+  color: #38cfb1;
+}
+#main-cont-about p {
+  padding: 20px;
+  text-align: center;
+  opacity: 40%;
+}
+#main-cont-about img {
+  border: 4px solid #F2A365;
+  border-radius: 100%;
+}
+#main-cont-about a {
   text-align: right;
   text-decoration: none;
   color: #F2A365;
