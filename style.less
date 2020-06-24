@@ -48,6 +48,10 @@ table {
 @divColor2: #F2A365;
 @backgroudColor: #ECECEC;
 
+.desktop-only{
+    display: none;
+}
+
 body{
     background-image: url("/img/background.png");
     font-size: 62.5%;
@@ -107,22 +111,91 @@ body{
     &:hover{
     box-shadow:         inset 0 0 10px #000000;
     }
+    @media (min-width: 1000px){
+            display: none;
+    }
 }
+#header-img{
+    background-image: url(/img/header.jpg);
+    height: 400px;
+    background-size:100% 100%;
+    opacity: 90%;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    h2{
+        padding: 150px;
+        margin: 0 auto;
+        color: white;
+        font-size: 4rem;
+        -webkit-text-stroke: 2px @divColor1;
 
+    }    
+    @media (min-width: 1000px){
+        display: block;
+    }
+}
+#header-img2{
+    background-image: url(/img/banner2.jpg);
+    height: 400px;
+    background-size:100% 100%;
+    opacity: 90%;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    h2{
+        padding: 150px;
+        margin: 0 auto;
+        color: white;
+        font-size: 4rem;
+        -webkit-text-stroke: 2px @divColor2;
+
+    }    
+    @media (min-width: 1000px){
+        display: block;
+    }
+}
 #header-cont{
     box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.75);
-    background: @textColor;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;;
     height: 100px;
+    @media (min-width: 1000px){
+        height: 130px;
+    }
     div{
         img{
             display: flex;
             margin: 0 auto;
         }
     }
+    nav{
+        display: none;
+        align-content: center;
+        justify-content: center;
+        @media (min-width: 1000px){
+            display: flex;
+    }
+        a{
+            padding: 40px;
+            font-size: 20px;
+            color: @divColor2;
+            text-decoration: none;
+            font-variant: small-caps;
+            font-family: 'Montserrat', sans-serif;
+            &:hover{
+                color:@divColor1;
+            }
+        }
+    }
 }
 
 #main-cont{
     margin-top: 30px;
+    @media (min-width: 1000px){
+        display: flex;
+        flex-direction: row;
+    }
     div{
         border: 4px solid @divColor1;
         margin: 0 auto;
@@ -139,6 +212,9 @@ body{
         border-radius: 20px;
         margin-bottom: 15px;
         box-shadow: 0px 14px 38px 0px rgba(0,0,0,0.75);
+        @media (min-width: 1000px){
+            width: 400px;
+        }
     }
     h1{
         text-align: center;
@@ -151,6 +227,10 @@ body{
     }
     img{
         border: 4px solid @divColor2;
+        @media (min-width: 1000px){
+            width: 400px;
+            height: 400px;
+        }
 
     }
     a{
@@ -160,7 +240,8 @@ body{
     }
 }
 .footer{
-    background: @textColor;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
     color: @divColor2;
     text-align: center;
     a{
@@ -173,6 +254,11 @@ body{
 }
 #main-cont-about{
     margin-top: 30px;
+    @media (min-width: 1000px){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     div{
         border: 4px solid @divColor1;
         margin: 0 auto;
@@ -208,6 +294,9 @@ body{
     img{
         border: 4px solid @divColor2;
         border-radius: 100%;
+        @media (min-width: 1000px){
+            width: 90%
+        }
 
     }
     a{
